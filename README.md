@@ -1,2 +1,0 @@
-# token
-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
