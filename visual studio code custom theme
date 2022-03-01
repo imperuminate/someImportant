@@ -1,0 +1,13 @@
+{
+    "editor.fontSize": 22,
+    "window.zoomLevel": -1,
+    "workbench.colorTheme": "Arc Dark",
+    "workbench.editor.enablePreview": true
+    "workbench.colorCustomizations": {
+        "[Arc Dark]": {
+            "sideBar.background": "#232323",
+            "editor.background": "#333434",
+            "activityBar.background": "#333434"
+        }
+    }
+}
