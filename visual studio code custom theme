@@ -1,13 +1,39 @@
 {
-    "editor.fontSize": 22,
-    "window.zoomLevel": -1,
-    "workbench.colorTheme": "Arc Dark",
-    "workbench.editor.enablePreview": true
+    "python.analysis.completeFunctionParens": true,
+    "editor.fontSize": 20,
+    "python.testing.pytestArgs": [
+        "Playwright"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.formatOnSave": true
+    },
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "files.exclude": {
+        ".pytest_cache": true,
+        ".venv": true,
+        "**/.DS_Store": false,
+        "Playwright/__pycache__": true
+    },
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "window.customTitleBarVisibility": "windowed",
+    "files.autoSave": "onFocusChange",
+    "editor.autoClosingQuotes": "always",
+    "html.format.wrapLineLength": 200,
+    "python.analysis.diagnosticSeverityOverrides": {
+
+    },
+    "workbench.colorTheme": "Default Dark+",
     "workbench.colorCustomizations": {
-        "[Arc Dark]": {
-            "sideBar.background": "#232323",
-            "editor.background": "#333434",
-            "activityBar.background": "#333434"
-        }
-    }
+    "statusBar.background": "#2f2f2f"
+},
+"workbench.statusBar.visible": false
 }
