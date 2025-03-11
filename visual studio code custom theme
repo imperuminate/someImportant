@@ -1,39 +1,155 @@
 {
-    "python.analysis.completeFunctionParens": true,
+    // Настройки редактора
     "editor.fontSize": 20,
+    "editor.fontWeight": "100",
+    "editor.wordWrapColumn": 200,
+    "editor.autoClosingQuotes": "always",
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+
+    "editor.tokenColorCustomizations": {
+        "comments": {
+            "fontStyle": "",
+            "foreground": "#646464",
+        },
+        "strings": "#d00a0ae1",
+        "keywords": "#e22b2b", // assert return from
+        "textMateRules": [
+            { //self
+                "scope": "variable.language.special.self.python",
+                "settings": {
+                    "foreground": "#a0586a"
+                }
+            },
+            { //self
+                "scope": "variable.parameter.function.language.special.self.python",
+                "settings": {
+                    "foreground": "#a0586a"
+                }
+            },
+            {
+                "scope": "support.function.builtin.python",
+                "settings": {
+                    "foreground": "#649bbb"
+                }
+            },
+            {
+                "scope": "variable.parameter.function.language.python",
+                "settings": {
+                    // "foreground": "#777777",
+                }
+            },
+            {
+                "scope": "meta.function-call.arguments.python",
+                "settings": {
+                    // "foreground": "#00FF00"
+                }
+            },
+            {
+                "scope": "meta.function-call.python",
+                "settings": {
+                    "foreground": "#758c92"
+                }
+            },
+            {
+                "scope": "variable.parameter.function.language.python",
+                "settings": {
+                    // "foreground": "#FFA500"
+                }
+            },
+            {
+                "scope": "meta.function.parameters.python",
+                "settings": {
+                    // "foreground": "#708f8f"
+                }
+            },
+            {
+                "scope": "keyword.control.flow.python",
+                "settings": {
+                    // "foreground": "#a18f34" 
+                }
+            },
+            {
+                "scope": "support.type.python",
+                "settings": {
+                    "foreground": "#73ace0" // Change to green
+                }
+            },
+            {
+                "scope": "support.type.exception.python",
+                "settings": {
+                    "foreground": "#73ace0" // Change to orange
+                }
+            },
+            {
+                "scope": "support.function.magic.python",
+                "settings": {
+                    "foreground": "#ff9100" // Change to orange (adjust as needed)
+                }
+            },
+            {
+                "scope": "source.python string.quoted",
+                "settings": {
+                    // "foreground": "#c43b3be1" // Change to orange (adjust as needed)
+                }
+            }
+
+            
+        ]
+    },
+    // Настройки Python
+    "python.analysis.completeFunctionParens": true,
+    "python.terminal.executeInFileDir": true,
     "python.testing.pytestArgs": [
         "Playwright"
     ],
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true
-    },
-    "[json]": {
-        "editor.formatOnSave": true
-    },
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
+    // Форматирование кода
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+    },
+    "black-formatter.args": [
+        "--line-length",
+        "90"
+    ],
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // Настройки файлов
+    "files.autoSave": "onFocusChange",
     "files.exclude": {
         ".pytest_cache": true,
-        ".venv": true,
-        "**/.DS_Store": false,
-        "Playwright/__pycache__": true
+        "**/__pycache__": true,
+        "venv": true,
+        "**/.pytest_cache": true
     },
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
-    "editor.stickyScroll.enabled": false,
-    "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": false,
-    "window.customTitleBarVisibility": "windowed",
-    "files.autoSave": "onFocusChange",
-    "editor.autoClosingQuotes": "always",
-    "html.format.wrapLineLength": 200,
-    "python.analysis.diagnosticSeverityOverrides": {
-
-    },
-    "workbench.colorTheme": "Default Dark+",
+    // Настройки проводника (Explorer)
+    "explorer.compactFolders": false,
+    "scm.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    // Настройки Jupyter Notebook
+    "notebook.cellToolbarVisibility": "hover",
+    "notebook.consolidatedOutputButton": false,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.globalToolbar": false,
+    "notebook.lineNumbers": "on",
+    // Color theme
     "workbench.colorCustomizations": {
-    "statusBar.background": "#2f2f2f"
-},
-"workbench.statusBar.visible": false
+        // "statusBar.background": "#2f2f2f",
+        // "sideBar.background": "#2a2a2a",
+        // "activityBar.background": "#232323",
+        // "editor.background": "#1e201f",
+        // "activityBar.background": "#202020"
+    },
+    "workbench.productIconTheme": "el-vsc-v1-icons",
+    // Разное
+    "window.customTitleBarVisibility": "windowed",
+    "breadcrumbs.enabled": false,
+    "explorer.confirmDelete": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "workbench.colorTheme": "Darcula Pycharm with Dark GUI",
+    "RainbowBrackets.depreciation-notice": false,
 }
